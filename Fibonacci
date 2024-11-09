@@ -1,0 +1,21 @@
+package Giris;
+import java.util.Scanner;
+public class Fibonacci {
+    public static void main(String[] args) {
+
+        int x,y=0,z=1,total,count=0;
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Lütfen fibonacci seri)sinin hesaplanmasını istediğiniz sayısı giriniz :");
+        x = input.nextInt();
+
+        do {
+            total = y+z;
+            y = z;
+            z = total;
+            count +=1;
+            System.out.println(count+ ". fibonacci serisi "+total);
+        }while (count<x);
+    }
+}
